@@ -12,7 +12,3 @@ plugins:
 exclude:
   - .gitignore
   - README.md
-
-# Keep static assets in the build output
-keep_files:
-  - assets
