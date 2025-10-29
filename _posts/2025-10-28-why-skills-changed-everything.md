@@ -2,7 +2,7 @@
 layout: post
 title: "How Superpowers Changed My Development Workflow"
 date: 2025-10-28
-categories: claude-code ai-development superpowers
+tags: [claude-code, ai-development, superpowers]
 ---
 
 # How Superpowers Changed My Development Workflow
