@@ -1,0 +1,86 @@
+<svg viewBox="0 0 1000 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="450" fill="#f9f9f9"/>
+
+  <!-- Title -->
+  <text x="500" y="30" font-size="22" font-weight="bold" text-anchor="middle" fill="#333">
+    Competitive Development: Parallel Exploration → Synthesis
+  </text>
+
+  <!-- Problem Statement -->
+  <rect x="300" y="60" width="400" height="50" fill="#f0f9ff" stroke="#0284c7" stroke-width="2" rx="4"/>
+  <text x="500" y="93" font-size="13" text-anchor="middle" fill="#0c2d6b" font-weight="bold">
+    Build Morpho Markets listing page
+  </text>
+
+  <!-- Arrow down -->
+  <line x1="500" y1="110" x2="500" y2="140" stroke="#999" stroke-width="2"/>
+
+  <!-- Three Parallel Agents -->
+  <g>
+    <!-- Agent 1 -->
+    <circle cx="250" cy="190" r="40" fill="#fef08a" stroke="#eab308" stroke-width="2"/>
+    <text x="250" y="200" font-size="13" font-weight="bold" text-anchor="middle" fill="#78350f">Agent 1</text>
+
+    <!-- Agent 1 Output: PR 11 -->
+    <rect x="180" y="250" width="140" height="80" fill="#dcfce7" stroke="#10b981" stroke-width="2" rx="4"/>
+    <text x="250" y="272" font-size="12" font-weight="bold" text-anchor="middle" fill="#065f46">PR 11: 79/100</text>
+    <text x="250" y="292" font-size="11" text-anchor="middle" fill="#065f46">Best UX</text>
+    <text x="250" y="308" font-size="11" text-anchor="middle" fill="#065f46">Search/Sort UI</text>
+
+    <!-- Arrow down -->
+    <line x1="250" y1="230" x2="250" y2="250" stroke="#10b981" stroke-width="2"/>
+  </g>
+
+  <g>
+    <!-- Agent 2 -->
+    <circle cx="500" cy="190" r="40" fill="#dbeafe" stroke="#06b6d4" stroke-width="2"/>
+    <text x="500" y="200" font-size="13" font-weight="bold" text-anchor="middle" fill="#164e63">Agent 2</text>
+
+    <!-- Agent 2 Output: PR 12 -->
+    <rect x="430" y="250" width="140" height="80" fill="#f0fdf4" stroke="#16a34a" stroke-width="3" rx="4"/>
+    <text x="500" y="272" font-size="12" font-weight="bold" text-anchor="middle" fill="#15803d">PR 12: 88/100</text>
+    <text x="500" y="292" font-size="11" text-anchor="middle" fill="#15803d">Clean Architecture</text>
+    <text x="500" y="308" font-size="11" text-anchor="middle" fill="#15803d">Real SDK Data</text>
+
+    <!-- Arrow down -->
+    <line x1="500" y1="230" x2="500" y2="250" stroke="#16a34a" stroke-width="2"/>
+  </g>
+
+  <g>
+    <!-- Agent 3 -->
+    <circle cx="750" cy="190" r="40" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="750" y="200" font-size="13" font-weight="bold" text-anchor="middle" fill="#3f0f5c">Agent 3</text>
+
+    <!-- Agent 3 Output: PR 13 -->
+    <rect x="680" y="250" width="140" height="80" fill="#fef2f2" stroke="#f87171" stroke-width="2" rx="4"/>
+    <text x="750" y="272" font-size="12" font-weight="bold" text-anchor="middle" fill="#7f1d1d">PR 13: 86/100</text>
+    <text x="750" y="292" font-size="11" text-anchor="middle" fill="#7f1d1d">RSC Architecture</text>
+    <text x="750" y="308" font-size="11" text-anchor="middle" fill="#7f1d1d">Perf concerns</text>
+
+    <!-- Arrow down -->
+    <line x1="750" y1="230" x2="750" y2="250" stroke="#f87171" stroke-width="2"/>
+  </g>
+
+  <!-- Synthesis arrows converging -->
+  <defs>
+    <marker id="arrowhead-gold2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <line x1="250" y1="330" x2="400" y2="370" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead-gold2)"/>
+  <line x1="500" y1="330" x2="500" y2="370" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead-gold2)"/>
+  <line x1="750" y1="330" x2="600" y2="370" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead-gold2)"/>
+
+  <!-- Final Synthesis -->
+  <rect x="350" y="370" width="300" height="50" fill="#fef3c7" stroke="#f59e0b" stroke-width="3" rx="6"/>
+  <text x="500" y="397" font-size="14" font-weight="bold" text-anchor="middle" fill="#92400e">
+    Synthesis: PR 12 + PR 11's UI = Best Solution
+  </text>
+
+  <!-- Bottom insight -->
+  <text x="500" y="435" font-size="12" text-anchor="middle" fill="#555" font-style="italic">
+    Explore multiple approaches in parallel. Synthesize the strongest elements.
+  </text>
+</svg>
