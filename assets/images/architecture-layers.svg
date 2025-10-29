@@ -1,9 +1,9 @@
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="800" height="400" fill="#f9f9f9"/>
+  <rect width="800" height="400" fill="transparent"/>
 
   <!-- Title -->
-  <text x="400" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">
+  <text x="400" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#fabd2f">
     Claude Code Ecosystem: Nested Aggregation
   </text>
 
@@ -30,12 +30,12 @@
   <!-- Arrows showing flow -->
   <defs>
     <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
+      <polygon points="0 0, 10 3, 0 6" fill="#d5c4a1"/>
     </marker>
   </defs>
 
   <!-- Bottom annotation -->
-  <text x="400" y="380" font-size="14" text-anchor="middle" fill="#666" font-style="italic">
+  <text x="400" y="380" font-size="14" text-anchor="middle" fill="#d5c4a1" font-style="italic">
     Each layer aggregates the one below it into increasingly useful abstractions
   </text>
 </svg>
