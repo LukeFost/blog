@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Why Skills Changed Everything: My Journey with Superpowers"
+title: "How Superpowers Changed My Development Workflow"
 date: 2025-10-28
 categories: claude-code ai-development superpowers
 ---
 
-# Why Skills Changed Everything: My Journey with Superpowers
+# How Superpowers Changed My Development Workflow
 
 ## Opening: The Meta-Aggregation Context
 
@@ -15,16 +15,17 @@ A beautiful abstraction.
 
 But understanding the architecture changes nothing. **Discovering which layer solves your problem changes everything.**
 
-Skills changed mine—specifically, the [superpowers marketplace](https://github.com/obra/superpowers-marketplace). Skills changed how I think about building with Claude Code.
+Skills changed mine (specifically the [superpowers marketplace](https://github.com/obra/superpowers-marketplace)). Skills changed how I think about building with Claude Code.
 
 ![Architecture layers diagram showing APIs aggregating into MCPs, MCPs into skills, skills into plugins, and plugins into marketplaces](/assets/images/architecture-layers.svg)
-*The Claude Code ecosystem builds in elegant layers. Understanding this architecture is useful—but discovering which layer solves your specific problem changes everything.*
+
+> The Claude Code ecosystem builds in elegant layers. Understanding this architecture is useful, but discovering which layer solves your specific problem changes everything.
 
 ## The Skill Stack as a System
 
 Skills force you to think differently. They create **decision checkpoints**.
 
-Three skills matter most: **brainstorm**, **write-plan**, and **requesting-code-review**—and how they work together.
+Three skills matter most: **brainstorm**, **write-plan**, and **superpowers:requesting-code-review** (and how they work together).
 
 - **Brainstorm** forces clarity before code: What problem am I solving? What alternatives exist? What do I want?
 - **Write-plan** converts clarity into a structured roadmap any model can execute
@@ -32,10 +33,11 @@ Three skills matter most: **brainstorm**, **write-plan**, and **requesting-code-
 
 The **delegation model** makes this powerful: You brainstorm with full context, plan at high level, hand off implementation to Haiku (who executes without overthinking), and bring Codex in for thinking-heavy review. Each model does what it does best.
 
-Before superpowers, I held all this mentally—decision context, plan, and review criteria juggled while coding. Skills externalize thinking. They make it visible and repeatable.
+Before superpowers, I held all this mentally (decision context, plan, and review criteria juggled while coding). Skills externalize thinking. They make it visible and repeatable.
 
 ![Skill stack workflow diagram showing brainstorm → write-plan → delegate to Haiku → review with Codex](/assets/images/skill-stack-workflow.svg)
-*Each model does what it does best. Thinking becomes visible and repeatable.*
+
+> Each model does what it does best. Thinking becomes visible and repeatable.
 
 ## The Skill Selection Problem
 
@@ -43,8 +45,9 @@ Automatic skill activation powers superpowers. Claude detects "design mode" and 
 
 The tension: **What happens when Claude's skill selection misses your actual problem?**
 
-![Stock image: organized precision tools or surgical instruments, representing the challenge of selecting the right tool for the job. Alternative: flat lay of specialized tools arranged neatly.](https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80)
-*Having many powerful tools doesn't help if you pick the wrong one for the job. The challenge is writing skills that clearly signal when to use them.*
+![Tools and skill selection concept](/assets/images/tools-selection.gif)
+
+> Having many powerful tools doesn't help if you pick the wrong one for the job. The challenge is writing skills that clearly signal when to use them.
 
 I've caught myself:
 - Reaching for **brainstorm** when I should use **root-cause-analysis** (debugging, not designing)
@@ -73,7 +76,8 @@ Before superpowers, my process wandered:
 Here's a real example. I built a Morpho Markets listing page for a DeFi dashboard. Instead of guessing the best approach, I used **competitive development**.
 
 ![Competitive development diagram showing three parallel agents exploring solutions, then their results converging and synthesizing the best elements](/assets/images/competitive-development.svg)
-*Three agents explore approaches independently. Instead of picking a winner, I synthesize the strongest elements from each.*
+
+> Three agents explore approaches independently. Instead of picking a winner, I synthesize the strongest elements from each.
 
 **Step 1: Set up the problem.** I describe requirements—list Morpho markets, display real SDK data, handle BigInt correctly, make it accessible.
 
@@ -89,12 +93,13 @@ The difference: I move from "pick the best implementation" to "explore multiple 
 
 **Skills change how you think, not how fast you work.**
 
-Before superpowers, I tried to be everything—designer, planner, implementer, reviewer, quality assurance. I context-switched constantly. The bottleneck was my ability to use AI effectively.
+Before superpowers, I tried to be everything (designer, planner, implementer, reviewer, quality assurance). I context-switched constantly. The bottleneck was my ability to use AI effectively.
 
 Skills externalize cognitive work. They make thinking visible. They create checkpoints where you must articulate what you're solving before you solve it.
 
-![Stock image: conductor's hands conducting an orchestra, or abstract visualization of coordinated systems working in harmony. Alternative: aerial view of a coordinated infrastructure like traffic control or logistics network.](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80)
-*The shift from doing everything yourself to orchestrating specialized work. Each component excels at its role.*
+![Coordination and orchestration](/assets/images/orchestration.gif)
+
+> The shift from doing everything yourself to orchestrating specialized work. Each component excels at its role.
 
 Now I can:
 - **Brainstorm with conviction.** The brainstorm skill forces me to explore alternatives.
@@ -142,14 +147,15 @@ You've hesitated about Claude Code's plugin ecosystem, thinking it collects nice
 
 Superpowers shifts how you work with Claude fundamentally. It transforms Claude from a tool into a thinking partner.
 
-![Stock image: abstract visualization of layered transparent planes or stratified architectural layers, representing how skills make invisible thinking visible and repeatable.](https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80)
-*Skills externalize thinking. They transform invisible mental work into visible, repeatable layers.*
+![Skills making thinking visible](/assets/images/thinking-visible.gif)
+
+> Skills externalize thinking. They transform invisible mental work into visible, repeatable layers.
 
 Here's what I'd tell someone starting:
 
 Install the [superpowers marketplace](https://github.com/obra/superpowers-marketplace). Start with brainstorm on your next design problem. Notice how it forces clarity. Use write-plan on the result. Notice how the plan becomes your contract with implementation. Delegate the execution. Notice how validation at multiple levels changes your confidence.
 
-That experience—where thinking becomes visible, plans become clear, delegation becomes safe—that's the unlock.
+That experience (where thinking becomes visible, plans become clear, delegation becomes safe) is the unlock.
 
 Skills make you think better. If you're working with Claude, thinking better is everything.
 
