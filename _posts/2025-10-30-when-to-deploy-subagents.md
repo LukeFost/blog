@@ -24,7 +24,7 @@ Compression is the feature, not a limitation. This explains why subagents excel 
 
 > Subagents don't offer speed. They compartmentalize work and fold away the investigative process, leaving only results.
 
-![A man collapses in exhaustion, all the complex work vanishing behind him](https://giphy.com/gifs/3oEjHGr1Fhz0kyv8Ig)
+![A man collapses in exhaustion, all the complex work vanishing behind him]({{ '/assets/images/context-compression-collapse.gif?v=1' | relative_url }})
 
 ## Why Subagents Transform Research and Exploration
 
@@ -51,7 +51,7 @@ Results return compressed—pure findings, no exploratory noise. The main agent 
 
 Parallel exploration + context compression = dramatically better research outcomes.
 
-![Multiple tasks happening simultaneously in controlled chaos](https://giphy.com/gifs/HBOMax-tom-and-jerry-hbomax-n-NV4cSrRYXXwfUcYnua)
+![Multiple tasks happening simultaneously in controlled chaos]({{ '/assets/images/parallel-multitasking.gif?v=1' | relative_url }})
 
 ### Specialization Prevents Tool Sprawl
 
@@ -81,7 +81,7 @@ Here's the problem: When the subagent hits a design decision (should this be asy
 
 Compare this to main-agent implementation where you see code in progress and course-correct mid-flight. That iteration loop drives implementation success.
 
-![A developer at their breaking point surrounded by error messages](https://giphy.com/gifs/aHiv481xki1WdhQonS)
+![A developer at their breaking point surrounded by error messages]({{ '/assets/images/developer-frustration.gif?v=1' | relative_url }})
 
 ### Context Isolation Prevents Pattern Learning
 
@@ -137,7 +137,7 @@ Here's what this looks like in real work:
 
 Notice the structure: **research parallelizes, implementation stays conversational, review happens systematically.**
 
-![Everything perfectly organized and in its place](https://giphy.com/gifs/wlRbr0tGYuWPTAuhor)
+![Everything perfectly organized and in its place]({{ '/assets/images/organized-workspace.gif?v=1' | relative_url }})
 
 ## The Real Constraint: Thinking vs. Doing
 
@@ -147,7 +147,7 @@ Subagents reveal a fundamental insight about AI-assisted work:
 
 When you're still figuring out what to build, subagent parallelization adds noise. You spawn three agents to explore different approaches without clarifying your constraints, so you receive three solutions to three different problems.
 
-![Chaos spiraling from unclear thinking and unstructured planning](https://giphy.com/gifs/M3zI5QTzgJKFU4Ggz5)
+![Chaos spiraling from unclear thinking and unstructured planning]({{ '/assets/images/overthinking-spiral.gif?v=1' | relative_url }})
 
 This is why the superpowers skills matter. The workflow runs:
 
