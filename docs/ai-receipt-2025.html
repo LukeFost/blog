@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧾 AI Usage Receipt 2025</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&family=Special+Elite&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            font-family: 'VT323', monospace;
+        }
+        
+        .receipt-container {
+            position: relative;
+        }
+        
+        .receipt {
+            background: #fff9f0;
+            width: 380px;
+            padding: 30px 25px;
+            box-shadow: 
+                0 0 10px rgba(0,0,0,0.3),
+                0 20px 40px rgba(0,0,0,0.4);
+            position: relative;
+            /* Torn paper effect at bottom */
+            clip-path: polygon(
+                0% 0%, 
+                100% 0%, 
+                100% calc(100% - 20px),
+                98% calc(100% - 15px),
+                96% calc(100% - 20px),
+                94% calc(100% - 12px),
+                92% calc(100% - 18px),
+                90% calc(100% - 14px),
+                88% calc(100% - 20px),
+                86% calc(100% - 10px),
+                84% calc(100% - 16px),
+                82% calc(100% - 20px),
+                80% calc(100% - 8px),
+                78% calc(100% - 18px),
+                76% calc(100% - 12px),
+                74% calc(100% - 20px),
+                72% calc(100% - 14px),
+                70% calc(100% - 18px),
+                68% calc(100% - 10px),
+                66% calc(100% - 20px),
+                64% calc(100% - 16px),
+                62% calc(100% - 12px),
+                60% calc(100% - 20px),
+                58% calc(100% - 8px),
+                56% calc(100% - 18px),
+                54% calc(100% - 14px),
+                52% calc(100% - 20px),
+                50% calc(100% - 10px),
+                48% calc(100% - 16px),
+                46% calc(100% - 20px),
+                44% calc(100% - 12px),
+                42% calc(100% - 18px),
+                40% calc(100% - 8px),
+                38% calc(100% - 20px),
+                36% calc(100% - 14px),
+                34% calc(100% - 16px),
+                32% calc(100% - 20px),
+                30% calc(100% - 10px),
+                28% calc(100% - 18px),
+                26% calc(100% - 12px),
+                24% calc(100% - 20px),
+                22% calc(100% - 16px),
+                20% calc(100% - 8px),
+                18% calc(100% - 20px),
+                16% calc(100% - 14px),
+                14% calc(100% - 18px),
+                12% calc(100% - 20px),
+                10% calc(100% - 10px),
+                8% calc(100% - 16px),
+                6% calc(100% - 20px),
+                4% calc(100% - 12px),
+                2% calc(100% - 18px),
+                0% calc(100% - 20px)
+            );
+        }
+        
+        .receipt::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 28px,
+                    rgba(0,0,0,0.02) 28px,
+                    rgba(0,0,0,0.02) 29px
+                );
+            pointer-events: none;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px dashed #333;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        
+        .store-name {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            color: #222;
+        }
+        
+        .store-tagline {
+            font-size: 16px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .store-info {
+            font-size: 14px;
+            color: #888;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+        
+        .section {
+            margin: 25px 0;
+            padding: 15px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            color: #333;
+        }
+        
+        .line-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            margin: 8px 0;
+            color: #444;
+        }
+        
+        .line-item.indent {
+            padding-left: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .line-item.bold {
+            font-weight: bold;
+            font-size: 18px;
+            color: #222;
+        }
+        
+        .line-item .dots {
+            flex: 1;
+            border-bottom: 1px dotted #ccc;
+            margin: 0 8px 4px;
+        }
+        
+        .divider {
+            text-align: center;
+            color: #999;
+            margin: 20px 0;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+        
+        .divider.stars {
+            font-size: 20px;
+        }
+        
+        .total-section {
+            background: #f5f0e5;
+            margin: 20px -25px;
+            padding: 20px 25px;
+            border-top: 3px double #333;
+            border-bottom: 3px double #333;
+        }
+        
+        .grand-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 28px;
+            font-weight: bold;
+            color: #222;
+            margin: 10px 0;
+        }
+        
+        .savings {
+            background: #222;
+            color: #fff;
+            padding: 15px;
+            margin: 20px -25px;
+            text-align: center;
+        }
+        
+        .savings-title {
+            font-size: 20px;
+            letter-spacing: 3px;
+        }
+        
+        .savings-amount {
+            font-size: 42px;
+            font-weight: bold;
+            color: #4ade80;
+            margin: 10px 0;
+        }
+        
+        .savings-note {
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        .barcode {
+            text-align: center;
+            margin: 30px 0 20px;
+        }
+        
+        .barcode-img {
+            font-family: 'Libre Barcode 128', cursive;
+            font-size: 60px;
+            letter-spacing: -2px;
+        }
+        
+        .barcode-lines {
+            display: flex;
+            justify-content: center;
+            gap: 2px;
+            margin: 15px 0;
+        }
+        
+        .barcode-lines span {
+            display: inline-block;
+            width: 2px;
+            background: #222;
+        }
+        
+        .barcode-number {
+            font-size: 14px;
+            letter-spacing: 8px;
+            color: #666;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px dashed #ccc;
+        }
+        
+        .footer-text {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.8;
+        }
+        
+        .thank-you {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #333;
+        }
+        
+        .survey {
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 20px -25px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .coupon {
+            border: 2px dashed #ff6b6b;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            background: #fff5f5;
+        }
+        
+        .coupon-title {
+            font-size: 14px;
+            color: #ff6b6b;
+            letter-spacing: 2px;
+        }
+        
+        .coupon-value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin: 10px 0;
+        }
+        
+        .coupon-exp {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .fun-stats {
+            background: #f8f8f8;
+            padding: 15px;
+            margin: 20px -25px;
+        }
+        
+        .fun-stat {
+            text-align: center;
+            margin: 15px 0;
+        }
+        
+        .fun-stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .fun-stat-label {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+        }
+        
+        .ascii-art {
+            font-family: monospace;
+            font-size: 10px;
+            line-height: 1.2;
+            color: #888;
+            text-align: center;
+            white-space: pre;
+            margin: 20px 0;
+        }
+        
+        .scroll-hint {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.9);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-family: sans-serif;
+            font-size: 14px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .highlight {
+            background: #ffff00;
+            padding: 0 4px;
+        }
+        
+        .strikethrough {
+            text-decoration: line-through;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-hint">↓ Keep scrolling! ↓</div>
+    
+    <div class="receipt-container">
+        <div class="receipt">
+            <!-- Header -->
+            <div class="header">
+                <div class="logo">🤖</div>
+                <div class="store-name">AI TOKENS-R-US</div>
+                <div class="store-tagline">~ Your friendly neighborhood token dealer ~</div>
+                <div class="store-info">
+                    123 Neural Network Boulevard<br>
+                    Silicon Valley, CA 94025<br>
+                    ☎ 1-800-ASK-CLAUDE<br>
+                    www.definitely-not-skynet.ai
+                </div>
+            </div>
+            
+            <div class="divider">━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+            
+            <!-- Transaction Info -->
+            <div class="line-item">
+                <span>DATE:</span>
+                <span>DEC 23, 2025</span>
+            </div>
+            <div class="line-item">
+                <span>TIME:</span>
+                <span>18:31:35 CST</span>
+            </div>
+            <div class="line-item">
+                <span>CUSTOMER:</span>
+                <span>LUKE F.</span>
+            </div>
+            <div class="line-item">
+                <span>MEMBER SINCE:</span>
+                <span>2025</span>
+            </div>
+            <div class="line-item">
+                <span>STATUS:</span>
+                <span>⭐ POWER USER ⭐</span>
+            </div>
+            
+            <div class="divider stars">✦ ✦ ✦ ✦ ✦</div>
+            
+            <!-- Claude Code Section -->
+            <div class="section">
+                <div class="section-title">═══ CLAUDE CODE ═══</div>
+                <div class="section-title" style="font-size: 12px; color: #888;">Nov 9 - Dec 19, 2025 (41 days)</div>
+                
+                <div class="line-item bold">
+                    <span>SESSIONS</span>
+                    <span class="dots"></span>
+                    <span>960</span>
+                </div>
+                <div class="line-item bold">
+                    <span>MESSAGES</span>
+                    <span class="dots"></span>
+                    <span>106,653</span>
+                </div>
+                <div class="line-item bold">
+                    <span>TOOL CALLS</span>
+                    <span class="dots"></span>
+                    <span>26,561</span>
+                </div>
+                
+                <div class="divider">- - - - - - - - - -</div>
+                
+                <div class="line-item">
+                    <span>CLAUDE OPUS 4.5</span>
+                    <span></span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Input tokens</span>
+                    <span class="dots"></span>
+                    <span>1,119,214</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Output tokens</span>
+                    <span class="dots"></span>
+                    <span>3,894,395</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Cache read</span>
+                    <span class="dots"></span>
+                    <span>2,490,536,179</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Cache write</span>
+                    <span class="dots"></span>
+                    <span>236,226,938</span>
+                </div>
+                <div class="line-item indent bold">
+                    <span>  @ $5/$25/$.50/$6.25</span>
+                    <span class="dots"></span>
+                    <span>$2,823.00</span>
+                </div>
+                
+                <div class="divider">- - - - - - - - - -</div>
+                
+                <div class="line-item">
+                    <span>CLAUDE SONNET 4.5</span>
+                    <span></span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Input tokens</span>
+                    <span class="dots"></span>
+                    <span>1,538,135</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Output tokens</span>
+                    <span class="dots"></span>
+                    <span>3,506,322</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Cache read</span>
+                    <span class="dots"></span>
+                    <span>2,721,768,401</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Cache write</span>
+                    <span class="dots"></span>
+                    <span>293,968,216</span>
+                </div>
+                <div class="line-item indent bold">
+                    <span>  @ $3/$15/$.30/$3.75</span>
+                    <span class="dots"></span>
+                    <span>$1,977.00</span>
+                </div>
+                
+                <div class="divider">- - - - - - - - - -</div>
+                
+                <div class="line-item">
+                    <span>CLAUDE OPUS 4.1</span>
+                    <span></span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Input tokens</span>
+                    <span class="dots"></span>
+                    <span>43,646</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Output tokens</span>
+                    <span class="dots"></span>
+                    <span>357,113</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Cache read</span>
+                    <span class="dots"></span>
+                    <span>130,493,390</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Cache write</span>
+                    <span class="dots"></span>
+                    <span>13,313,133</span>
+                </div>
+                <div class="line-item indent bold">
+                    <span>  @ $15/$75/$1.50/$18.75</span>
+                    <span class="dots"></span>
+                    <span>$467.00</span>
+                </div>
+                
+                <div class="divider">- - - - - - - - - -</div>
+                
+                <div class="line-item">
+                    <span>CLAUDE HAIKU 4.5</span>
+                    <span></span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Input tokens</span>
+                    <span class="dots"></span>
+                    <span>54,277</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Output tokens</span>
+                    <span class="dots"></span>
+                    <span>273,512</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Cache read</span>
+                    <span class="dots"></span>
+                    <span>134,149,294</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Cache write</span>
+                    <span class="dots"></span>
+                    <span>24,719,006</span>
+                </div>
+                <div class="line-item indent bold">
+                    <span>  @ $1/$5/$.08/$1</span>
+                    <span class="dots"></span>
+                    <span>$37.00</span>
+                </div>
+                
+                <div class="divider">━━━━━━━━━━━━━━━━━━</div>
+                
+                <div class="line-item bold">
+                    <span>CLAUDE CODE SUBTOTAL</span>
+                    <span class="dots"></span>
+                    <span>$5,304.00</span>
+                </div>
+            </div>
+            
+            <div class="divider stars">✦ ✦ ✦ ✦ ✦</div>
+            
+            <!-- Codex Section -->
+            <div class="section">
+                <div class="section-title">═══ CODEX CLI ═══</div>
+                <div class="section-title" style="font-size: 12px; color: #888;">Sep 23 - Dec 22, 2025 (~90 days)</div>
+                
+                <div class="line-item bold">
+                    <span>SESSIONS</span>
+                    <span class="dots"></span>
+                    <span>934</span>
+                </div>
+                
+                <div class="divider">- - - - - - - - - -</div>
+                
+                <div class="line-item">
+                    <span>GPT-5-CODEX</span>
+                    <span></span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Sessions</span>
+                    <span class="dots"></span>
+                    <span>428</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Input tokens</span>
+                    <span class="dots"></span>
+                    <span>1,820,228,230</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Output tokens</span>
+                    <span class="dots"></span>
+                    <span>11,735,195</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Reasoning tokens</span>
+                    <span class="dots"></span>
+                    <span>7,230,016</span>
+                </div>
+                <div class="line-item indent bold">
+                    <span>  @ $1.25/$10</span>
+                    <span class="dots"></span>
+                    <span>$350.00</span>
+                </div>
+                
+                <div class="divider">- - - - - - - - - -</div>
+                
+                <div class="line-item">
+                    <span>GPT-5.2</span>
+                    <span></span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Sessions</span>
+                    <span class="dots"></span>
+                    <span>213</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Input tokens</span>
+                    <span class="dots"></span>
+                    <span>1,185,858,522</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Output tokens</span>
+                    <span class="dots"></span>
+                    <span>9,650,622</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Reasoning tokens</span>
+                    <span class="dots"></span>
+                    <span>7,512,309</span>
+                </div>
+                <div class="line-item indent bold">
+                    <span>  @ $1.75/$14</span>
+                    <span class="dots"></span>
+                    <span>$380.00</span>
+                </div>
+                
+                <div class="divider">- - - - - - - - - -</div>
+                
+                <div class="line-item">
+                    <span>GPT-5.1-CODEX-MAX</span>
+                    <span></span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Sessions</span>
+                    <span class="dots"></span>
+                    <span>175</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Input tokens</span>
+                    <span class="dots"></span>
+                    <span>615,460,540</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Output tokens</span>
+                    <span class="dots"></span>
+                    <span>4,126,430</span>
+                </div>
+                <div class="line-item indent bold">
+                    <span>  @ $1.25/$10</span>
+                    <span class="dots"></span>
+                    <span>$130.00</span>
+                </div>
+                
+                <div class="divider">- - - - - - - - - -</div>
+                
+                <div class="line-item">
+                    <span>GPT-5.1-CODEX</span>
+                    <span class="dots"></span>
+                    <span>$35.00</span>
+                </div>
+                <div class="line-item">
+                    <span>GPT-5</span>
+                    <span class="dots"></span>
+                    <span>$30.00</span>
+                </div>
+                <div class="line-item">
+                    <span>GPT-5.2-CODEX</span>
+                    <span class="dots"></span>
+                    <span>$25.00</span>
+                </div>
+                
+                <div class="divider">━━━━━━━━━━━━━━━━━━</div>
+                
+                <div class="line-item bold">
+                    <span>CODEX CLI SUBTOTAL</span>
+                    <span class="dots"></span>
+                    <span>$950.00</span>
+                </div>
+            </div>
+            
+            <div class="divider stars">✦ ✦ ✦ ✦ ✦</div>
+            
+            <!-- Pi Section -->
+            <div class="section">
+                <div class="section-title">═══ PI AGENT ═══</div>
+                <div class="section-title" style="font-size: 12px; color: #888;">Dec 19-23, 2025 (5 days)</div>
+                
+                <div class="line-item bold">
+                    <span>SESSIONS</span>
+                    <span class="dots"></span>
+                    <span>240</span>
+                </div>
+                <div class="line-item bold">
+                    <span>MESSAGES</span>
+                    <span class="dots"></span>
+                    <span>9,315</span>
+                </div>
+                
+                <div class="divider">- - - - - - - - - -</div>
+                
+                <div class="line-item indent">
+                    <span>  Claude Opus 4.5</span>
+                    <span class="dots"></span>
+                    <span>7,674 calls</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Claude Haiku 4.5</span>
+                    <span class="dots"></span>
+                    <span>813 calls</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  Gemini 3 Pro</span>
+                    <span class="dots"></span>
+                    <span>619 calls</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  GPT-5.2</span>
+                    <span class="dots"></span>
+                    <span>437 calls</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  GLM-4.7</span>
+                    <span class="dots"></span>
+                    <span>100 calls</span>
+                </div>
+                <div class="line-item indent">
+                    <span>  DeepSeek V3.2</span>
+                    <span class="dots"></span>
+                    <span>27 calls</span>
+                </div>
+                
+                <div class="divider">━━━━━━━━━━━━━━━━━━</div>
+                
+                <div class="line-item bold">
+                    <span>PI SUBTOTAL (EST.)</span>
+                    <span class="dots"></span>
+                    <span>$500.00</span>
+                </div>
+            </div>
+            
+            <!-- Totals Section -->
+            <div class="total-section">
+                <div class="line-item bold">
+                    <span>TOTAL SESSIONS</span>
+                    <span class="dots"></span>
+                    <span>2,134</span>
+                </div>
+                <div class="line-item bold">
+                    <span>TOTAL MESSAGES</span>
+                    <span class="dots"></span>
+                    <span>115,968+</span>
+                </div>
+                <div class="line-item bold">
+                    <span>TOTAL TOKENS</span>
+                    <span class="dots"></span>
+                    <span>~14.3 BILLION</span>
+                </div>
+                
+                <div class="divider">━━━━━━━━━━━━━━━━━━</div>
+                
+                <div class="grand-total">
+                    <span>API TOTAL:</span>
+                    <span>$6,754.00</span>
+                </div>
+            </div>
+            
+            <!-- Savings Section -->
+            <div class="savings">
+                <div class="savings-title">★ YOUR SUBSCRIPTION SAVINGS ★</div>
+                <div class="line-item" style="color: #888; margin: 15px 0;">
+                    <span>API Price</span>
+                    <span class="strikethrough">$6,754.00</span>
+                </div>
+                <div class="line-item" style="color: #888; margin: 15px 0;">
+                    <span>Claude Max (~2 mo)</span>
+                    <span>-$400.00</span>
+                </div>
+                <div class="line-item" style="color: #888; margin: 15px 0;">
+                    <span>ChatGPT Pro (~4 mo)</span>
+                    <span>-$800.00</span>
+                </div>
+                <div class="line-item" style="color: #fff; margin: 15px 0;">
+                    <span>YOU PAID</span>
+                    <span>~$1,200.00</span>
+                </div>
+                <div class="savings-amount">YOU SAVED $5,554!</div>
+                <div class="savings-note">That's 82% off! 🎉</div>
+            </div>
+            
+            <!-- Fun Stats -->
+            <div class="fun-stats">
+                <div class="section-title">═══ FUN FACTS ═══</div>
+                
+                <div class="fun-stat">
+                    <div class="fun-stat-value">📚 28,600,000+</div>
+                    <div class="fun-stat-label">Words generated (est. 4 chars/token)</div>
+                </div>
+                
+                <div class="fun-stat">
+                    <div class="fun-stat-value">📖 ~114 novels</div>
+                    <div class="fun-stat-label">Worth of text (at 250k words each)</div>
+                </div>
+                
+                <div class="fun-stat">
+                    <div class="fun-stat-value">⌨️ 2,600+ msgs/day</div>
+                    <div class="fun-stat-label">Average daily Claude Code usage</div>
+                </div>
+                
+                <div class="fun-stat">
+                    <div class="fun-stat-value">🌙 68 sessions</div>
+                    <div class="fun-stat-label">Started at midnight</div>
+                </div>
+                
+                <div class="fun-stat">
+                    <div class="fun-stat-value">🔥 9,250 messages</div>
+                    <div class="fun-stat-label">Your busiest day (Nov 19)</div>
+                </div>
+                
+                <div class="fun-stat">
+                    <div class="fun-stat-value">📁 26,561</div>
+                    <div class="fun-stat-label">Tool calls (file edits, bash, etc)</div>
+                </div>
+                
+                <div class="fun-stat">
+                    <div class="fun-stat-value">💾 ~95%</div>
+                    <div class="fun-stat-label">Cache hit rate (mega efficient!)</div>
+                </div>
+                
+                <div class="fun-stat">
+                    <div class="fun-stat-value">🏆 1,324 msgs</div>
+                    <div class="fun-stat-label">Longest single session</div>
+                </div>
+            </div>
+            
+            <!-- Models Used -->
+            <div class="section">
+                <div class="section-title">═══ MODELS USED ═══</div>
+                <div class="line-item indent">
+                    <span>☐ Claude Opus 4.5</span>
+                    <span>✓</span>
+                </div>
+                <div class="line-item indent">
+                    <span>☐ Claude Sonnet 4.5</span>
+                    <span>✓</span>
+                </div>
+                <div class="line-item indent">
+                    <span>☐ Claude Opus 4.1</span>
+                    <span>✓</span>
+                </div>
+                <div class="line-item indent">
+                    <span>☐ Claude Haiku 4.5</span>
+                    <span>✓</span>
+                </div>
+                <div class="line-item indent">
+                    <span>☐ GPT-5-Codex</span>
+                    <span>✓</span>
+                </div>
+                <div class="line-item indent">
+                    <span>☐ GPT-5.2</span>
+                    <span>✓</span>
+                </div>
+                <div class="line-item indent">
+                    <span>☐ GPT-5.1-Codex-Max</span>
+                    <span>✓</span>
+                </div>
+                <div class="line-item indent">
+                    <span>☐ GPT-5.1-Codex</span>
+                    <span>✓</span>
+                </div>
+                <div class="line-item indent">
+                    <span>☐ GPT-5</span>
+                    <span>✓</span>
+                </div>
+                <div class="line-item indent">
+                    <span>☐ Gemini 3 Pro</span>
+                    <span>✓</span>
+                </div>
+                <div class="line-item indent">
+                    <span>☐ Gemini 3 Flash</span>
+                    <span>✓</span>
+                </div>
+                <div class="line-item indent">
+                    <span>☐ GLM-4.7</span>
+                    <span>✓</span>
+                </div>
+                <div class="line-item indent">
+                    <span>☐ DeepSeek V3.2</span>
+                    <span>✓</span>
+                </div>
+            </div>
+            
+            <!-- Coupon -->
+            <div class="coupon">
+                <div class="coupon-title">✂️ - - - - - - - - - - - ✂️</div>
+                <div class="coupon-value">KEEP CODING!</div>
+                <div class="coupon-title">VALID: ALWAYS</div>
+                <div class="coupon-exp">*May cause addiction to AI pair programming</div>
+            </div>
+            
+            <!-- ASCII Art -->
+            <div class="ascii-art">
+    _______________
+   |  ___________  |
+   | |           | |
+   | |   CLAUDE  | |
+   | |   +       | |
+   | |   CODEX   | |
+   | |   +       | |
+   | |   PI      | |
+   | |___________| |
+   |_______________|
+   |_______________|
+       |       |
+      _|_     _|_
+            </div>
+            
+            <!-- Barcode -->
+            <div class="barcode">
+                <div class="barcode-lines">
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 1px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 3px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 1px;"></span>
+                    <span style="height: 50px; width: 3px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 1px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 2px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 1px;"></span>
+                    <span style="height: 50px; width: 3px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 1px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 2px;"></span>
+                    <span style="height: 50px; width: 1px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 3px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 1px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 2px;"></span>
+                    <span style="height: 50px; width: 1px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 1px;"></span>
+                    <span style="height: 50px; width: 3px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 1px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 2px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 1px;"></span>
+                    <span style="height: 50px; width: 3px;"></span>
+                    <span style="height: 50px;"></span>
+                    <span style="height: 50px; width: 1px;"></span>
+                    <span style="height: 50px;"></span>
+                </div>
+                <div class="barcode-number">2025 1223 1831 3500</div>
+            </div>
+            
+            <!-- Survey -->
+            <div class="survey">
+                <p>📱 SCAN TO TAKE OUR SURVEY 📱</p>
+                <p style="font-size: 10px; margin-top: 10px;">
+                    "How likely are you to recommend<br>
+                    AI coding assistants to a friend?"
+                </p>
+                <p style="font-size: 18px; margin-top: 10px;">
+                    😫 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - <span class="highlight">10</span> 🤩
+                </p>
+            </div>
+            
+            <!-- Footer -->
+            <div class="footer">
+                <div class="thank-you">★ THANK YOU! ★</div>
+                <div class="footer-text">
+                    Your AI assistants appreciate<br>
+                    your continued patronage!<br><br>
+                    
+                    RETURN POLICY: No refunds on<br>
+                    tokens already consumed. All bugs<br>
+                    are features in disguise.<br><br>
+                    
+                    Questions? Ask Claude!<br>
+                    (We're always here 24/7/365)<br><br>
+                    
+                    ════════════════════════<br><br>
+                    
+                    <span style="font-size: 11px; color: #aaa;">
+                    This receipt is 100% recyclable<br>
+                    (into more AI conversations)<br><br>
+                    
+                    Receipt #: AI-2025-1223-LUKE<br>
+                    Auth: APPROVED<br>
+                    Method: SUBSCRIPTION<br><br>
+                    
+                    "I think, therefore I code."<br>
+                    - Claude, probably<br><br>
+                    
+                    ════════════════════════<br><br>
+                    
+                    ⭐ Please come again! ⭐<br>
+                    (As if you have a choice now)
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Remove scroll hint after scrolling
+        window.addEventListener('scroll', function() {
+            const hint = document.querySelector('.scroll-hint');
+            if (window.scrollY > 200) {
+                hint.style.opacity = '0';
+                hint.style.transition = 'opacity 0.5s';
+            } else {
+                hint.style.opacity = '1';
+            }
+        });
+    </script>
+</body>
+</html>
